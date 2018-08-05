@@ -1,0 +1,35 @@
+header {
+    text-align: center;
+}
+
+.fa-caret-right{
+    font-size: 36px;
+}
+
+.fa-caret-down{
+    display: none;
+    font-size: 36px;
+}
+
+#main-search-div {
+    text-align: center;
+}
+
+#addtional-search-label {
+    vertical-align: 30%
+}
+
+#addtional-search-controls {
+    position: relative;
+    text-align: center;
+    left: -58px;
+}
+
+#political-party{
+    position: relative;
+    left: 61px;
+}
+
+#addtional-search-options{
+    display: none;
+}

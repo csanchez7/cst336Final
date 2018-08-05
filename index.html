@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Buy A Politician</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url("css/styles.css");
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="index.html">LOGO PLACE HOLDER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="index.php"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="login.html"><i class="fa fa-sign-in"></i> Log In</a>
+                <a class="nav-item nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <header>
+            <h1>Politician Lobbying Platform</h1>
+            <h4>Your one stop shop to push your agenda!</h4>
+        </header>
+        <div class="main-content" id="main-search-div">
+            <form>
+                <input placeholder="Politicin's Name" type="text" name="product-search"><button><i class="fa fa-search"></i> Search</button>
+            </form>
+            <div id="addtional-search-controls">
+                <i class="fa fa-caret-right" id="show-more-search"></i><i class="fa fa-caret-down" id="hide-more-search"></i><span id="addtional-search-label"> Addtional Search Filters</span>
+                <div id="addtional-search-options">
+                    <form>
+                        <span>Select by State: </span><select id="state-select" name="state"></select>
+                    </form>
+                    <form id="political-party">
+                        <span>Politcal Party:</span>
+                        <input type="radio" name="party" value="democrat" id="democrat-option"><label for="democrat-option"> Democrat</label>
+                        <input type="radio" name="party" value="republican" id="republican-option"><label for="republican-option"> Republican</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
