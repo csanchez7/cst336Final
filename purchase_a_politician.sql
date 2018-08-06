@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 05, 2018 at 07:42 PM
+-- Generation Time: Aug 06, 2018 at 01:49 AM
 -- Server version: 5.5.57-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.22
 
@@ -107,7 +107,7 @@ INSERT INTO `senators` (`senId`, `sen_firstName`, `sen_lastName`, `state`, `part
 (7, 'Roger', 'Wicker', 'MS', 2, 'RWicker', 724850),
 (8, 'Ted', 'Cruz', 'TX', 2, 'TCruz', 322505),
 (9, 'Susan', 'Collins', 'ME', 2, 'SCollins', 275520),
-(10, 'Paul', 'Rand', 'KY', 2, 'PRand', 116278),
+(10, 'Rand', 'Paul', 'KY', 2, 'RandP', 116278),
 (11, 'John', 'Kennedy', 'LA', 2, 'JKennedy', 56950),
 (12, 'Bernie', 'Sanders', 'VT', 3, 'BSanders', 294923),
 (13, 'Robert', 'Menendez', 'NJ', 1, 'RMenendez', 729757),
@@ -190,7 +190,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `adminId` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `adminId` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `party_affiliation`
