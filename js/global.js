@@ -15,13 +15,13 @@ class Product {
 
 //TEST DATA
 var response = [{
-        sen_firstName: "Lamar",
-        sen_lastName: "Alexander",
+        sen_firstName: "John",
+        sen_lastName: "McCain",
         state: "TN",
         price: 45789.00,
         party: "Republican",
-        imgURL: "lAlexander",
-        id: 1
+        imgURL: "JMcCain",
+        senId: 1
     },
     {
         sen_firstName: "Tammy",
@@ -29,8 +29,8 @@ var response = [{
         state: "WI",
         price: 30000.00,
         party: "Democrat",
-        imgURL: "tBaldwin",
-        id: 2
+        imgURL: "JThune",
+        senId: 2
     },
     {
         sen_firstName: "John",
@@ -38,8 +38,8 @@ var response = [{
         state: "WY",
         price: 25000.00,
         party: "Republican",
-        imgURL: "jBarrasso",
-        id: 3
+        imgURL: "KHarris",
+        senId: 3
     },
     {
         sen_firstName: "Michael",
@@ -47,8 +47,8 @@ var response = [{
         state: "CO",
         price: 233244.00,
         party: "Democrat",
-        imgURL: "mBennet",
-        id: 4
+        imgURL: "RPaul",
+        senId: 4
     }
 ];
 
@@ -62,7 +62,7 @@ function parseProductResponse(response) {
             tempProduct.lastName = response[x].sen_lastName;
             tempProduct.state = response[x].state;
             tempProduct.party = response[x].party;
-            tempProduct.id = response[x].id;
+            tempProduct.id = response[x].senId;
             tempProduct.price = response[x].price;
             tempProduct.img = "/cst336Final/img/" + response[x].imgURL + ".jpg";
             products.push(tempProduct);
