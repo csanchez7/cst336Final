@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Buy A Politician</title>
+    <title>Cart</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="index.html">LOGO PLACE HOLDER</a>
+        <a class="navbar-brand" href="index.html"><img src="/cst336Final/img/logos/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,7 +39,7 @@
         </header>
         <div class="main-content">
             <div id="empty-cart-warning">
-                <h3>Your cart is currently empty.</h2>
+                <h3 class="error-font">Your cart is currently empty.</h2>
             </div>
             <table id="cart-table"></table>
         </div>

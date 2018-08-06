@@ -13,3 +13,7 @@ header {
     color: blue !important;
     cursor: pointer; 
 }
+
+.error-font{
+    color: red;
+}
