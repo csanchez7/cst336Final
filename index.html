@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        @import url("css/styles.css");
+        @import url("css/global.css");
+        @import url("css/search.css");
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/global.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.php"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="index.html"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="login.html"><i class="fa fa-sign-in"></i> Log In</a>
                 <a class="nav-item nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
             </div>
@@ -36,24 +38,23 @@
             <h4>Your one stop shop to push your agenda!</h4>
         </header>
         <div class="main-content" id="main-search-div">
-            <form>
-                <input placeholder="Politicin's Name" type="text" name="product-search"><button><i class="fa fa-search"></i> Search</button>
-            </form>
+                <input placeholder="Politician's Name" type="text" name="product-search"><button id="product-search-button"><i class="fa fa-search"></i> Search</button>
             <div id="addtional-search-controls">
                 <i class="fa fa-caret-right" id="show-more-search"></i><i class="fa fa-caret-down" id="hide-more-search"></i><span id="addtional-search-label"> Addtional Search Filters</span>
                 <div id="addtional-search-options">
-                    <form>
                         <span>Select by State: </span><select id="state-select" name="state"></select>
-                    </form>
-                    <form id="political-party">
+                        <br>
                         <span>Politcal Party:</span>
-                        <input type="radio" name="party" value="democrat" id="democrat-option"><label for="democrat-option"> Democrat</label>
-                        <input type="radio" name="party" value="republican" id="republican-option"><label for="republican-option"> Republican</label>
-                    </form>
+                        <input type="radio" name="party" value="democrat" class="party-select" id="democrat-option"><label for="democrat-option"> Democrat</label>
+                        <input type="radio" name="party" value="republican" class="party-select" id="republican-option"><label for="republican-option"> Republican</label> <a class="reset-anchor" id="party-radio-reset">RESET</a>
                 </div>
             </div>
+            <div id="products">
+                <table id="product-table">
+                    <tr class="product-table-row" id="product-row-0"></tr>
+                </table>
+            </div>
         </div>
-    </div>
     </div>
 </body>
 

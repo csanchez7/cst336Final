@@ -1,0 +1,18 @@
+.large-cart{
+    font-size: 50px;
+}
+
+#cart-table{
+    width: 50%;
+    margin: 20px auto;
+}
+
+#cart-totals-row{
+    text-align: right;
+}
+
+#empty-cart-warning{
+    text-align: center;
+    color: red;
+    display: none;
+}
