@@ -2,6 +2,9 @@ var products = [];
 
 //TODO: Add hooks to backend to grab search results from backend. 
 
+parseProductResponse(response);
+//TODO: Create ajax call to db to search.
+
 var states = [
     "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
     "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA",

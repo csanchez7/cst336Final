@@ -16,4 +16,57 @@ function parseEditProductResponse(response) {
     }
 }
 
+function showAvgPrice (data, status){
+    if(status === "success"){
+        var parsedData = JSON.parse(data)
+        $("#avg-product-price-total").append(cleanMoney(parsedData.avgPrice));
+        $("#avg-price").show();
+    }
+}
+
+//Still needs work
+function showPartyCount (data, status){
+    if(status === "success"){
+        var parsedData = JSON.parse(data);
+        //var string = ""
+        $("#avg-product-price-total").append(cleanMoney(parsedData.avgPrice));
+        $("#avg-price").show();
+    }
+}
+
+function showMostExpensive (data, status){
+    if(status === "success"){
+        var parsedData = JSON.parse(data);
+        var string = parsedData.sen_firstName + " " +  parsedData.sen_lastName + " at an amount of " + cleanMoney(parsedData.max) + ".";
+        $("#most-expensive").append(string);
+        $("#most-expensive-label").show();
+    }
+}
+
+function showReportError(){
+    $("#report-error").show();
+}
+
+function cleanMoney(money){
+    return "$"+ parseFloat(money).toFixed(2);
+}
+
+$("#avg-product-price").click(function(){
+    $("#report-error").hide();
+    ajaxCall('post', "inc/adminReports.php", {function: "avgProduct"}, showAvgPrice, showReportError)
+});
+
+$("#total-party-count").click(function(){
+    $("#report-error").hide();
+    ajaxCall('post', "inc/adminReports.php", {function: "partyCount"}, showPartyCount, showReportError)
+});
+
+$("#most-expensive-product").click(function(){
+    $("#report-error").hide();
+    ajaxCall('post', "inc/adminReports.php", {function: "mostExp"}, showMostExpensive, showReportError)
+});
+
+
+
+
 

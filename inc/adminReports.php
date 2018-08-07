@@ -1,7 +1,20 @@
 <?php
-   include "connect.php";
-   
-   $conn = getDBConnection();
+
+   //May have to chnage to connect.php for you own service
+   include "dbConnection.php";
+
+   if(isset($_POST['function'])) {
+      $conn = getDBConnection();
+      if($_POST['function'] == 'avgProduct') {
+         getAvgProductPrice();  
+      }
+      else if($_POST['function'] == 'partyCount') {
+         getPartyCount();  
+      }
+      else if($_POST['function'] == 'mostExp') {
+        getMostExpensiveSen();  
+      }
+   }
    
    //gets the avg price of  all senators
    //returns just the average, not the array
@@ -14,7 +27,9 @@
        $stmt->execute();
        $avg = $stmt->fetch(PDO::FETCH_ASSOC);
        
-       return $avg[avg];
+       $res = new stdClass();
+       $res->avgPrice = $avg[avg];
+       echo json_encode($res);
    }
    
    //gets the party count for each party- not fully tested-is it getting all the parties
@@ -30,7 +45,7 @@
        $stmt->execute();
        $partyCnt = $stmt->fetch(PDO::FETCH_ASSOC);
  
-       return $partyCnt;
+       echo $partyCnt;
    }
    
    //calculates which senator is most expensive
@@ -43,10 +58,8 @@
        $stmt = $conn->prepare($sql);
        $stmt->execute();
        $max = $stmt->fetch(PDO::FETCH_ASSOC);
-       
-       return $max;
-   }
-   
 
+       echo json_encode($max);
+   }
 ?>
 

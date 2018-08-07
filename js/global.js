@@ -49,6 +49,14 @@ var response = [{
     }
 ];
 
-parseProductResponse(response);
-//TODO: Create ajax call to db to search.
+
+function ajaxCall(type, url, payload, successCallback, errorCallback){
+     $.ajax({
+      url: url,
+      type: type,
+      data: payload,
+      success: successCallback,
+      error: errorCallback
+    });
+}
 

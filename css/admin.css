@@ -1,4 +1,12 @@
-#admin-panel{
+.reports {
+    display: none;
+}
+
+#report-error {
+    display: none;
+}
+
+#admin-panel {
     width: 80%;
     margin: 0 auto;
 }

@@ -44,8 +44,7 @@
             <hr>
         </header>
         <div class="main-content" id="admin-panel">
-            <h4>Product:</h4>
-            <input placeholder="Product ID" type="text" name="product-search"><button id="product-search-button"><i class="fa fa-search"></i> Search</button>
+            <h4>Edit Products:</h4>
                 <table id="product-admin-table">
                     <tr>
                         <th>ID</th>
@@ -58,9 +57,15 @@
                     </tr>
                 </table>
             <h4>Reporting:</h4>
-            <button>Get Average Product Price</button>
-            <button>Get Party Affiliation Count</button>
-            <button>Get Last Purchases</button>
+            <button class="admin-report-button" id="avg-product-price">Get Average Product Price</button>
+            <button class="admin-report-button" id="total-party-count">Get Party Affiliation Count</button>
+            <button class="admin-report-button" id="most-expensive-product">Get Most Expensive Product</button>
+            <div id="report-results">
+                <p id="avg-price" class="reports">The average price of all the senetors is <span id="avg-product-price-total"></span></p>
+                <p id="party-count" class="reports">The totals for each politcal party: <span id="party-total"></span></p>
+                <p id="most-expensive-label" class="reports">The the most expensive senetor is <span id="most-expensive"></span></p>
+                <p id="report-error" class="error-font">Sorry. That report had an issue. Please try again.</p>
+            </div>
         </div>
     </div>
 </body>
