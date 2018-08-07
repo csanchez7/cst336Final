@@ -1,6 +1,3 @@
-var products = [];
-var cart = [];
-
 class Product {
     constructor() {
         this.firstName = null;
@@ -54,19 +51,4 @@ var response = [{
 
 parseProductResponse(response);
 //TODO: Create ajax call to db to search.
-function parseProductResponse(response) {
-    if (response) {
-        for (var x in response) {
-            var tempProduct = new Product();
-            tempProduct.firstName = response[x].sen_firstName;
-            tempProduct.lastName = response[x].sen_lastName;
-            tempProduct.state = response[x].state;
-            tempProduct.party = response[x].party;
-            tempProduct.id = response[x].senId;
-            tempProduct.price = response[x].price;
-            tempProduct.img = "/cst336Final/img/" + response[x].imgURL + ".jpg";
-            products.push(tempProduct);
-        }
-    }
-}
 

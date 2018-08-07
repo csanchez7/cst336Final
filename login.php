@@ -31,9 +31,9 @@
             </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Home</a>
-                <a class="nav-item nav-link active" href="login.html"><i class="fa fa-sign-in"></i> Log In  <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+                <a class="nav-item nav-link" href="index.php"><i class="fa fa-home"></i> Home</a>
+                <a class="nav-item nav-link active" href="login.php"><i class="fa fa-sign-in"></i> Log In  <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a>
             </div>
         </div>
     </nav>

@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer></script>
     <script src="js/global.js" defer></script>
-    <script src="js/admin.js" defer></script>
+    <script src="js/adminPanel.js" defer></script>
 </head>
 
 <body>
@@ -33,8 +33,8 @@
             </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Home</a>
-                <a class="nav-item nav-link" href="login.html"><i class="fa fa-sign-out"></i> Log Out</a>
+                <a class="nav-item nav-link" href="index.php"><i class="fa fa-home"></i> Home</a>
+                <a class="nav-item nav-link" href="login.php"><i class="fa fa-sign-out"></i> Log Out</a>
             </div>
         </div>
     </nav>
@@ -45,6 +45,7 @@
         </header>
         <div class="main-content" id="admin-panel">
             <h4>Product:</h4>
+            <input placeholder="Product ID" type="text" name="product-search"><button id="product-search-button"><i class="fa fa-search"></i> Search</button>
                 <table id="product-admin-table">
                     <tr>
                         <th>ID</th>

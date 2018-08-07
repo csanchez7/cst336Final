@@ -1,3 +1,5 @@
+var products = [];
+
 //TODO: Add hooks to backend to grab search results from backend. 
 
 var states = [
@@ -15,6 +17,23 @@ function loadStateDropdown() {
         $('<option/>').val(states[i]).html(states[i]).appendTo('#state-select');
     }
 }
+
+function parseProductResponse(response) {
+    if (response) {
+        for (var x in response) {
+            var tempProduct = new Product();
+            tempProduct.firstName = response[x].sen_firstName;
+            tempProduct.lastName = response[x].sen_lastName;
+            tempProduct.state = response[x].state;
+            tempProduct.party = response[x].party;
+            tempProduct.id = response[x].senId;
+            tempProduct.price = response[x].price;
+            tempProduct.img = "/cst336Final/img/" + response[x].imgURL + ".jpg";
+            products.push(tempProduct);
+        }
+    }
+}
+
 
 function loadProductTable() {
     var rowCounter = 0;

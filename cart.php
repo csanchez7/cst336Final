@@ -26,9 +26,9 @@
             </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Home</a>
-                <a class="nav-item nav-link" href="login.html"><i class="fa fa-sign-in"></i> Log In</a>
-                <a class="nav-item nav-link active" href="cart.html"><i class="fa fa-shopping-cart"></i> Cart<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index.php"><i class="fa fa-home"></i> Home</a>
+                <a class="nav-item nav-link" href="login.php"><i class="fa fa-sign-in"></i> Log In</a>
+                <a class="nav-item nav-link active" href="cart.php"><i class="fa fa-shopping-cart"></i> Cart<span class="sr-only">(current)</span></a>
             </div>
         </div>
     </nav>
