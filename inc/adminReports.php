@@ -44,7 +44,7 @@
                GROUP BY party";
        $stmt = $conn->prepare($sql);
        $stmt->execute();
-       $partyCnt = $stmt->fetch(PDO::FETCH_ASSOC);
+       $partyCnt = $stmt->fetchAll(PDO::FETCH_ASSOC);
  
        echo json_encode($partyCnt);
    }
