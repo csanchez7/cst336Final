@@ -42,7 +42,7 @@
             <h2>Admin Login Form</h2>
         </header>
         <div class="main-content">
-            <form action="inc/loginAction.php" method = "post">
+            <form action="inc/verifyUser.php" method = "post">
                 <div class="container">
                     <label for="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" required>
