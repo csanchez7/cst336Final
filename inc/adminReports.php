@@ -39,13 +39,14 @@
        global $conn;
        
        $sql = "SELECT party, COUNT(senId) as count 
-               FROM senators 
+               FROM senators JOIN party_affiliation
+                   ON senators.partyId = party_affiliation.partyId
                GROUP BY party";
        $stmt = $conn->prepare($sql);
        $stmt->execute();
        $partyCnt = $stmt->fetch(PDO::FETCH_ASSOC);
  
-       echo $partyCnt;
+       echo json_encode($partyCnt);
    }
    
    //calculates which senator is most expensive
