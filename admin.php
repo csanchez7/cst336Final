@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="index.php"><i class="fa fa-home"></i> Home</a>
-                <a class="nav-item nav-link" href="login.php"><i class="fa fa-sign-out"></i> Log Out</a>
+                <a class="nav-item nav-link" href="inc/logout.php"><i class="fa fa-sign-out"></i> Log Out</a>
             </div>
         </div>
     </nav>
