@@ -1,32 +1,45 @@
 <?php
-//not tested-does not include imageurl fields
+   function updateProduct()
+   {
       include "connect.php";
       $conn = getDBConnection();
       
       $firstName = $_POST['firstName'];
       $lastName = $_POST['lastName'];
       $state = $_POST['state'];
-      $party = $_POST['party'];
+      $partyId = $_POST['partyId'];
       $price = $_POST['price'];
       $id = $_POST['id'];
+      $imgURL = $_POST['imgURL'];
     
       $sql = "UPDATE senators
               SET sen_firstName = :firstName, sen_lastName = :lastName, state = :state,
-                  party = :party, price = :price
+                  partyId = :partyId, imgURL = :imgURL, price = :price
               WHERE senId = :id";
                   
       $namedParameters = array();
       $namedParameters[':firstName'] = $firstName;
       $namedParameters[':lastName'] = $lastName;
       $namedParameters[':state'] = $state;
-      $namedParameters[':party'] = $party;
+      $namedParameters[':partyId'] = $partyId;
       $namedParameters[':price'] = $price;
       $namedParameters[':id'] = $id;
+      $namedParameters[':imgURL'] = $imgURL;
       
-      $statement = $conn->prepare($sql);
-      $statement->execute($namedParameters);
+      $res = new stdClass();
+      $res->okay = "";
+      
+      try{
+         $statement = $conn->prepare($sql);
+         $statement->execute($namedParameters);
+         $res->okay = "okay";
+       }
+      
+      catch(Exception $e) {
+         $res->okay = "error";
+      }
 
+      echo json_encode($res);
+   }
 ?>
 
-
-       
