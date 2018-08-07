@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 06, 2018 at 01:49 AM
+-- Generation Time: Aug 07, 2018 at 07:02 AM
 -- Server version: 5.5.57-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.22
 
@@ -60,8 +60,8 @@ CREATE TABLE `party_affiliation` (
 
 INSERT INTO `party_affiliation` (`partyId`, `party`) VALUES
 (1, 'D'),
-(2, 'R'),
-(3, 'I');
+(3, 'I'),
+(2, 'R');
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,6 @@ INSERT INTO `party_affiliation` (`partyId`, `party`) VALUES
 
 CREATE TABLE `purchase` (
   `purchaseId` int(11) NOT NULL,
-  `userId` int(11) NOT NULL,
   `senId` int(11) NOT NULL,
   `purchaseCost` float NOT NULL,
   `purchaseDate` date NOT NULL
@@ -114,37 +113,17 @@ INSERT INTO `senators` (`senId`, `sen_firstName`, `sen_lastName`, `state`, `part
 (14, 'Dianne', 'Feinstein', 'CA', 1, 'DFeinstein', 402539),
 (15, 'Kamala', 'Harris', 'CA', 1, 'KHarris', 53696),
 (16, 'Ed', 'Markey', 'MA', 1, 'EMarkey', 294923),
-(17, 'Bill', 'Nelson', 'FL', 1, 'BNelson', 1028790);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `userId` int(11) NOT NULL,
-  `firstName` varchar(20) NOT NULL,
-  `lastName` varchar(20) NOT NULL,
-  `sex` char(1) NOT NULL,
-  `email` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`userId`, `firstName`, `lastName`, `sex`, `email`) VALUES
-(1, 'Bruce', 'Wayne', 'M', 'bwayne@gmail.com'),
-(2, 'Diana', 'Prince', 'F', 'dprince@aol.com'),
-(3, 'Oliver', 'Queen', 'M', 'oqueen@yahoo.com'),
-(4, 'Clark', 'Kent', 'M', 'ckent@apple.com'),
-(5, 'Barbara', 'Gordon', 'F', 'bgordon@yahoo.com'),
-(6, 'Barry', 'Allen', 'M', 'ballen@apple.com'),
-(7, 'Dick', 'Grayson', 'M', 'dgrayson@gmail.com'),
-(8, 'Selina', 'Kyle', 'F', 'skyle@gmail.com'),
-(9, 'Hal', 'Jordan', 'M', 'hjordan@gmail.com'),
-(10, 'Arthur', 'Curry', 'M', 'acurry@aol.com');
+(17, 'Bill', 'Nelson', 'FL', 1, 'BNelson', 1028790),
+(19, 'Luther', 'Strange', 'AL', 2, 'LStrange', 50),
+(20, 'Joni', 'Ernst', 'IA', 2, 'JErnst', 44500),
+(21, 'Angus', 'King', 'ME', 3, 'AKing', 72000),
+(22, 'Charles', 'Schumer', 'NY', 1, 'CSchumer', 984757),
+(23, 'Mark', 'Warner', 'VA', 1, 'MWarner', 805894),
+(24, 'Luther', 'Strange', 'AL', 2, 'LStrange', 50200),
+(25, 'Joni', 'Ernst', 'IA', 2, 'JErnst', 44500),
+(26, 'Angus', 'King', 'ME', 3, 'AKing', 72000),
+(27, 'Charles', 'Schumer', 'NY', 1, 'CSchumer', 984757),
+(28, 'Mark', 'Warner', 'VA', 1, 'MWarner', 805894);
 
 --
 -- Indexes for dumped tables
@@ -161,26 +140,21 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `party_affiliation`
   ADD PRIMARY KEY (`partyId`),
-  ADD KEY `partyId` (`partyId`);
+  ADD UNIQUE KEY `partyId` (`partyId`),
+  ADD UNIQUE KEY `party` (`party`);
 
 --
 -- Indexes for table `purchase`
 --
 ALTER TABLE `purchase`
-  ADD PRIMARY KEY (`purchaseId`);
+  ADD PRIMARY KEY (`purchaseId`),
+  ADD KEY `senId` (`senId`);
 
 --
 -- Indexes for table `senators`
 --
 ALTER TABLE `senators`
-  ADD PRIMARY KEY (`senId`),
-  ADD KEY `partyId` (`partyId`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`userId`);
+  ADD PRIMARY KEY (`senId`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -208,17 +182,17 @@ ALTER TABLE `purchase`
 -- AUTO_INCREMENT for table `senators`
 --
 ALTER TABLE `senators`
-  MODIFY `senId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `senId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `purchase`
+--
+ALTER TABLE `purchase`
+  ADD CONSTRAINT `purchase_ibfk_1` FOREIGN KEY (`senId`) REFERENCES `senators` (`senId`);
 
 --
 -- Constraints for table `senators`
