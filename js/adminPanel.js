@@ -18,6 +18,7 @@ function parseEditProductResponse(response) {
 
 function showAvgPrice (data, status){
     if(status === "success"){
+        $("#avg-product-price-total").html("");
         var parsedData = JSON.parse(data)
         $("#avg-product-price-total").append(cleanMoney(parsedData.avgPrice));
         $("#avg-price").show();
@@ -36,6 +37,7 @@ function showPartyCount (data, status){
 
 function showMostExpensive (data, status){
     if(status === "success"){
+        $("#most-expensive").html("");
         var parsedData = JSON.parse(data);
         var string = parsedData.sen_firstName + " " +  parsedData.sen_lastName + " at an amount of " + cleanMoney(parsedData.max) + ".";
         $("#most-expensive").append(string);
