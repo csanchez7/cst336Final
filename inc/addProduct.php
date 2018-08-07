@@ -1,4 +1,5 @@
 <?php
+
 //susissssnjsjdkkTESRTTTTT
 //not tested-does not include imageurl fields
     include "connect.php";
@@ -7,19 +8,21 @@
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $state = $_POST['state'];
-    $party = $_POST['party'];
+    $partyId = $_POST['partyId'];
     $price = $_POST['price'];
+    $imgURL = $_POST['imgURL'];
     
     $sql = "INSERT INTO senators 
-               (sen_firstName, sen_lastName, state, party, price)
-               VALUES ( :firstName, :lastName, :state, :party, :price)";
+               (senId, sen_firstName, sen_lastName, state, partyId, imgURL, price)
+               VALUES ( DEFAULT, :firstName, :lastName, :state, :partyId, :imgURL, :price)";
             
     $namedParameters = array();
     $namedParameters[':firstName'] = $firstName;
     $namedParameters[':lastName'] = $lastName;
     $namedParameters[':state'] = $state;
-    $namedParameters[':party'] = $party;
+    $namedParameters[':partyId'] = $partyId;
     $namedParameters[':price'] = $price;
+    $namedParameters[':imgURL'] = $imgURL;
     
     $statement = $conn->prepare($sql);
     $statement->execute($namedParameters);
