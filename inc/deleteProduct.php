@@ -1,14 +1,29 @@
 <?php
-//not tested
+function deleteProduct()
+{
    include "connect.php";
    $conn = getDBConnection();
    
    $sql = "DELETE FROM senators WHERE senId = :id";
    
-   $stmt = $conn->prepare($sql);
-   $data = array(":id" => $_POST['id']);
-   $stmt->execute($data);
+   $res = new stdClass();
+   $res->okay = "";
    
-   header("Location: admin.php");
+   try {
+      $stmt = $conn->prepare($sql);
+      $data = array(":id" => $_POST['id']);
+      $stmt->execute($data);
+      $res->okay = "okay";
+   }
+
+    catch(Exception $e) {
+      $res->okay = "error";
+   }
+
+   echo json_encode($res);
+}
 ?>
+
+
+
 
