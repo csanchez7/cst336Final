@@ -7,6 +7,15 @@
     font-size: 36px;
 }
 
+.add-to-cart-button{
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 #main-search-div {
     text-align: center;
 }

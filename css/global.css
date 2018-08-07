@@ -2,9 +2,16 @@ header {
     text-align: center;
 }
 
+nav{
+    background-color: #002A4E
+}
 .disabled{
     cursor: not-allowed;
     opacity: .5;  
+}
+
+.nav-bar-item{
+    color: white;
 }
 
 .reset-anchor{
