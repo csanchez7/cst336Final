@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 07, 2018 at 07:02 AM
+-- Generation Time: Aug 07, 2018 at 04:18 PM
 -- Server version: 5.5.57-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.22
 
@@ -114,16 +114,11 @@ INSERT INTO `senators` (`senId`, `sen_firstName`, `sen_lastName`, `state`, `part
 (15, 'Kamala', 'Harris', 'CA', 1, 'KHarris', 53696),
 (16, 'Ed', 'Markey', 'MA', 1, 'EMarkey', 294923),
 (17, 'Bill', 'Nelson', 'FL', 1, 'BNelson', 1028790),
-(19, 'Luther', 'Strange', 'AL', 2, 'LStrange', 50),
-(20, 'Joni', 'Ernst', 'IA', 2, 'JErnst', 44500),
-(21, 'Angus', 'King', 'ME', 3, 'AKing', 72000),
-(22, 'Charles', 'Schumer', 'NY', 1, 'CSchumer', 984757),
-(23, 'Mark', 'Warner', 'VA', 1, 'MWarner', 805894),
-(24, 'Luther', 'Strange', 'AL', 2, 'LStrange', 50200),
-(25, 'Joni', 'Ernst', 'IA', 2, 'JErnst', 44500),
-(26, 'Angus', 'King', 'ME', 3, 'AKing', 72000),
-(27, 'Charles', 'Schumer', 'NY', 1, 'CSchumer', 984757),
-(28, 'Mark', 'Warner', 'VA', 1, 'MWarner', 805894);
+(18, 'Luther', 'Strange', 'AL', 2, 'LStrange', 50),
+(19, 'Joni', 'Ernst', 'IA', 2, 'JErnst', 44500),
+(20, 'Charles', 'Schumer', 'NY', 1, 'CSchumer', 984757),
+(21, 'Mark', 'Warner', 'VA', 1, 'MWarner', 805894),
+(22, 'Angus', 'King', 'ME', 3, 'AKing', 72000);
 
 --
 -- Indexes for dumped tables
