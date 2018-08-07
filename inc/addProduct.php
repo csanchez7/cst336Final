@@ -8,7 +8,7 @@
     $state = $_POST['state'];
     $partyId = $_POST['partyId'];
     $price = $_POST['price'];
-    $imgURL = $_POST['imgURL'];
+    $imgURL =  $_POST['imgURL'];
     
     $sql = "INSERT INTO senators 
                (senId, sen_firstName, sen_lastName, state, partyId, imgURL, price)
