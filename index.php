@@ -26,9 +26,9 @@
             </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.php"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="login.php"><i class="fa fa-sign-in"></i> Log In</a>
-                <a class="nav-item nav-link" href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a>
+                <a class="nav-item nav-link active-nav" href="index.php"><i class="fa fa-home"></i> Home</a>
+                <a class="nav-item nav-link custom-nav" href="login.php"><i class="fa fa-sign-in"></i> Log In</a>
+                <a class="nav-item nav-link custom-nav" href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a>
             </div>
         </div>
     </nav>
@@ -38,7 +38,7 @@
             <h4>Your one stop shop to push your agenda!</h4>
         </header>
         <div class="main-content" id="main-search-div">
-            <input placeholder="Politician's Name" type="text" name="product-search"><button id="product-search-button"><i class="fa fa-search"></i> Search</button>
+            <input class="search-controls" placeholder="Politician's Name" type="text" name="product-search"><button class="search-controls" id="product-search-button"><i class="fa fa-search"></i> Search</button>
             <div id="addtional-search-controls">
                 <i class="fa fa-caret-right" id="show-more-search"></i><i class="fa fa-caret-down" id="hide-more-search"></i><span id="addtional-search-label"> Addtional Search Filters</span>
                 <div id="addtional-search-options">

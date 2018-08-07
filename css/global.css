@@ -3,11 +3,20 @@ header {
 }
 
 nav{
-    background-color: #002A4E
+    background-color: #002A4E;
 }
+
 .disabled{
     cursor: not-allowed;
     opacity: .5;  
+}
+
+.custom-nav{
+   color:white !important;
+}
+
+.active-nav{
+    color: #FFFFF0 !important;
 }
 
 .nav-bar-item{
