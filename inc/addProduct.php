@@ -1,7 +1,4 @@
 <?php
-
-//susissssnjsjdkkTESRTTTTT
-//not tested-does not include imageurl fields
     include "connect.php";
     $conn = getDBConnection();
    
@@ -11,6 +8,7 @@
     $partyId = $_POST['partyId'];
     $price = $_POST['price'];
     $imgURL =  $_POST['imgURL'];
+
     
     $sql = "INSERT INTO senators 
                (senId, sen_firstName, sen_lastName, state, partyId, imgURL, price)
@@ -24,6 +22,19 @@
     $namedParameters[':price'] = $price;
     $namedParameters[':imgURL'] = $imgURL;
     
-    $statement = $conn->prepare($sql);
-    $statement->execute($namedParameters);
+    $res = new stdClass();
+    $res->okay = "";
+    
+    try {
+      $statement = $conn->prepare($sql);
+      $statement->execute($namedParameters);
+      $res->okay = "okay";
+   }
+
+
+    catch(Exception $e) {
+      $res->okay = "error";
+   }
+
+   echo json_encode($res);
 ?>
