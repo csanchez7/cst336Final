@@ -19,16 +19,16 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="index.php"><img src="/cst336Final/img/logos/logo.png"></a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.php"><img src="/cst336Final/img/logos/logo.png"></img></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.php"><i class="fa fa-home"></i> Home</a>
-                <a class="nav-item nav-link" href="login.php"><i class="fa fa-sign-in"></i> Log In</a>
-                <a class="nav-item nav-link active" href="cart.php"><i class="fa fa-shopping-cart"></i> Cart<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active-nav" href="index.php"><i class="fa fa-home"></i> Home</a>
+                <a class="nav-item nav-link custom-nav" href="login.php"><i class="fa fa-sign-in"></i> Log In</a>
+                <a class="nav-item nav-link custom-nav" href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a>
             </div>
         </div>
     </nav>

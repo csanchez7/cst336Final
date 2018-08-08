@@ -36,6 +36,7 @@
         <header>
             <h1>Politician Lobbying Platform</h1>
             <h4>Your one stop shop to push your agenda!</h4>
+            <hr>
         </header>
         <div class="main-content" id="main-search-div">
             <input class="search-controls" placeholder="Politician's Name" type="text" name="product-search" id="name-search"><button class="search-controls" id="product-search-button"><i class="fa fa-search"></i> Search</button>

@@ -1,30 +1,5 @@
 //TEST stuff
 var cart = JSON.parse(localStorage.getItem("cart"));
-console.log(cart);
-console.log(localStorage);
-/*
-function loadCart(response) {
-    console.log(response);
-    if (response) {
-        for (var x in response) {
-            var tempProduct = new Product();
-            tempProduct.firstName = response[x].sen_firstName;
-            tempProduct.lastName = response[x].sen_lastName;
-            tempProduct.state = response[x].state;
-            tempProduct.party = response[x].party;
-            tempProduct.id = response[x].id;
-            tempProduct.price = response[x].price;
-            tempProduct.img = "/cst336Final/img/" + response[x].imgURL + ".jpg";
-            cart.push(tempProduct);
-        }
-    }
-}
-*/
-
-
-//end test stuff
-
-//TODO: Add hooks into backend to grab cart, and delete cart items.
 loadCartTable();
 
 function loadCartTable() {
@@ -43,18 +18,19 @@ function loadCartTable() {
                 infoString);
             var priceString = "$" + cart[x].price;
             $("#cart-row-" + rowCounter).append("<td class='cart-td cart-top-align'>" + priceString + "</td>");
-            var buttonString = "<button>Remove</button>";
+            var buttonString = "<button class='remove-from-cart-button' id='"+cart[x].id+"'>Remove</button>";
             $("#cart-row-" + rowCounter).append("<td class='cart-td cart-top-align'>" + buttonString + "</td>");
             rowCounter++;
+            $("#" + cart[x].id).click(function(){
+                removeFromCart(this.id);
+            });
         }
         var cartTotal = sumCartPrice();
          $("#cart-table").append("<tr class='cart-table-row' id='cart-totals-row'>");
-         var checkoutButtonString = "<button>Purchase</button>";
+         var checkoutButtonString = "<button class='purchase-button'>Purchase</button>";
          var totalPriceString = "<span>Total: $" + cartTotal + "</span>";
          $("#cart-totals-row").append("<td colspan='4' class='cart-td'>" + totalPriceString + "<br>" +
                                 checkoutButtonString + "</td>");
-         
-         
     }
 
 }
@@ -67,3 +43,19 @@ function sumCartPrice() {
         return (parseFloat(total) + parseFloat(num)).toFixed(2);
     });
 }
+
+function clearCartTable(){
+    $("#cart-table").empty();
+}
+function removeFromCart(itemID){
+   for(var x = 0; x < cart.length; x++){
+        if(cart[x].id == itemID){
+            cart.splice(cart.indexOf(cart[x]), 1);
+        }
+    }
+    updateCart(cart);
+    clearCartTable();
+    loadCartTable();
+}
+
+

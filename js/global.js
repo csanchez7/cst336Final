@@ -60,3 +60,8 @@ function ajaxCall(type, url, payload, successCallback, errorCallback){
     });
 }
 
+function updateCart(cartArr){
+    localStorage.removeItem("cart");
+    localStorage.setItem("cart", JSON.stringify(cartArr));
+}
+

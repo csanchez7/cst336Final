@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!isset($_SESSION['username']) && $_SESSION['valid'] != "true" ){
-        header('Location: /cst336Final/login.php');
+        header('Location: /cst336Final/cart.php');
     }
 ?>
 
@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url("css/global.css");
-        @import url("css/admin.css");
+        @import url("css/purchase.css");
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer></script>
     <script src="js/global.js" defer></script>
-    <script src="js/adminPanel.js" defer></script>
+    <script src="js/purchase.js" defer></script>
 </head>
 
 <body>

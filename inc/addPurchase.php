@@ -1,7 +1,11 @@
 <?php
+
+session_start();
+ addPurchase();
  function addPurchase()
  {
-    include "connect.php";
+    //TODO: may have to chnade to connect.php
+    include "dbConnection.php";
     $conn = getDBConnection();
     
     $senId = $_POST['Id'];

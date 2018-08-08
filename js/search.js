@@ -27,7 +27,6 @@ function loadStateDropdown() {
 
 function inCartCheck(elemID){
     for(var x = 0; x < cart.length; x++){
-        console.log("ttt" +  products[x].id);
         if(cart[x].id == elemID){
            $("#" + elemID).html("In Cart");
            $("#" + elemID).addClass("disabled");
@@ -137,11 +136,6 @@ function addItemToCart(itemId){
     }
     updateCart(cart);
     inCartCheck(itemId);
-}
-
-function updateCart(cartArr){
-    localStorage.removeItem("cart");
-    localStorage.setItem("cart", JSON.stringify(cartArr));
 }
 
 function productLoading(){
