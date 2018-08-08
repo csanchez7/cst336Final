@@ -39,6 +39,8 @@
             <hr>
         </header>
         <div class="main-content" id="main-search-div">
+        <button class="search-controls" id="product-search-button"><i class="fa fa-search"></i> Search</button>
+            <!--will use once backend search is wroking
             <input class="search-controls" placeholder="Politician's Name" type="text" name="product-search" id="name-search"><button class="search-controls" id="product-search-button"><i class="fa fa-search"></i> Search</button>
             <div id="addtional-search-controls">
                 <i class="fa fa-caret-right" id="show-more-search"></i><i class="fa fa-caret-down" id="hide-more-search"></i><span id="addtional-search-label"> Addtional Search Filters</span>
@@ -51,6 +53,7 @@
                         <input type="radio" name="party" value="I" class="party-select" id="independent-option"><label for="independent-option"> Independent</label> <a class="reset-anchor" id="party-radio-reset">RESET</a>
                 </div>
             </div>
+            -->
             <div id="products">
                 <img class="loading" id="product-loading" src="img/logos/loadingGif.gif"></img>
                 <table id="product-table">
