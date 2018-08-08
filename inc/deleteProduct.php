@@ -1,7 +1,8 @@
 <?php
+deleteProduct();
 function deleteProduct()
 {
-   include "connect.php";
+   include "dbConnection.php";
    $conn = getDBConnection();
    
    $sql = "DELETE FROM senators WHERE senId = :id";
@@ -23,10 +24,3 @@ function deleteProduct()
    echo json_encode($res);
 }
 ?>
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> hanna

@@ -1,7 +1,9 @@
 <?php
+   updateProduct();
    function updateProduct()
    {
-      include "connect.php";
+      //TODO: You may need to chnade to
+      include "dbConnection.php";
       $conn = getDBConnection();
       
       $firstName = $_POST['firstName'];
@@ -37,6 +39,7 @@
       
       catch(Exception $e) {
          $res->okay = "error";
+         $res->exeception = $e;
       }
 
       echo json_encode($res);

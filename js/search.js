@@ -1,9 +1,5 @@
 var products = [];
 var cart = JSON.parse(localStorage.getItem("cart"));
-//TODO: Add hooks to backend to grab search results from backend. 
-
-//TODO: Create ajax call to db to search.
-
 var states = [
     "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
     "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA",

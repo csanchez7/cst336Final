@@ -39,6 +39,7 @@
     <div class="wrapper">
         <header>
             <h2>Admin Login Form</h2>
+            <hr>
         </header>
         <div class="main-content">
             <form action="inc/verifyUser.php" method = "post">

@@ -1,5 +1,5 @@
 <?php
-    include "connect.php";
+    include "dbConnection.php";
     $conn = getDBConnection();
    
     $firstName = $_POST['firstName'];
@@ -8,7 +8,6 @@
     $partyId = $_POST['partyId'];
     $price = $_POST['price'];
     $imgURL =  $_POST['imgURL'];
-
     
     $sql = "INSERT INTO senators 
                (senId, sen_firstName, sen_lastName, state, partyId, imgURL, price)
@@ -34,6 +33,7 @@
 
     catch(Exception $e) {
       $res->okay = "error";
+      echo $e;
    }
 
    echo json_encode($res);

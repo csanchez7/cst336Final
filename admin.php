@@ -57,6 +57,30 @@
                         <th>Price</th>
                     </tr>
                 </table>
+            <br>
+            <br>
+             <h4>Add Product:</h4>
+             <table id="add-product-table">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>State</th>
+                        <th>Party</th>
+                        <th>Img URL</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td><input type='text' id='new-first' class='first-edit new-field'></input></td>
+                        <td><input type='text' id='new-last' class='last-edit new-field'></input></td>
+                        <td><input type='text' id='new-state' class='state-edit new-field'></input></td>
+                        <td><input type='text' id='new-party' class='party-edit new-field'></input></td>
+                        <td><input type='text' id='new-img' class='img-edit new-field'></input></td>
+                        <td><input type='text' id='new-price' class='price-edit new-field'></input></td>
+                        <td class="row-edit-controls"><button id='submit-new' class='edit-submit'>Submit</button></td>
+                    </tr>
+                </table>
+            <br>
+            <br>
             <h4>Reporting:</h4>
             <button class="admin-report-button" id="avg-product-price">Get Average Product Price</button>
             <button class="admin-report-button" id="total-party-count">Get Party Affiliation Count</button>
