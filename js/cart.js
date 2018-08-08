@@ -1,6 +1,8 @@
 //TEST stuff
-var cart = [];
-
+var cart = JSON.parse(localStorage.getItem("cart"));
+console.log(cart);
+console.log(localStorage);
+/*
 function loadCart(response) {
     console.log(response);
     if (response) {
@@ -17,12 +19,12 @@ function loadCart(response) {
         }
     }
 }
+*/
 
 
 //end test stuff
 
 //TODO: Add hooks into backend to grab cart, and delete cart items.
-loadCart(response);
 loadCartTable();
 
 function loadCartTable() {
@@ -62,6 +64,6 @@ function sumCartPrice() {
         return item.price;
     });
     return cartTotalMap.reduce(function(total, num) {
-        return total + num;
+        return (parseFloat(total) + parseFloat(num)).toFixed(2);
     });
 }

@@ -51,3 +51,11 @@
     border-collapse: separate;
 }
 
+#product-search-error{
+    display: none;
+}
+
+#product-search-none{
+    display: none;
+}
+

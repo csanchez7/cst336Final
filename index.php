@@ -38,7 +38,7 @@
             <h4>Your one stop shop to push your agenda!</h4>
         </header>
         <div class="main-content" id="main-search-div">
-            <input class="search-controls" placeholder="Politician's Name" type="text" name="product-search"><button class="search-controls" id="product-search-button"><i class="fa fa-search"></i> Search</button>
+            <input class="search-controls" placeholder="Politician's Name" type="text" name="product-search" id="name-search"><button class="search-controls" id="product-search-button"><i class="fa fa-search"></i> Search</button>
             <div id="addtional-search-controls">
                 <i class="fa fa-caret-right" id="show-more-search"></i><i class="fa fa-caret-down" id="hide-more-search"></i><span id="addtional-search-label"> Addtional Search Filters</span>
                 <div id="addtional-search-options">
@@ -51,10 +51,12 @@
                 </div>
             </div>
             <div id="products">
+                <img class="loading" id="product-loading" src="img/logos/loadingGif.gif"></img>
                 <table id="product-table">
-                    <tr class="product-table-row" id="product-row-0"></tr>
                 </table>
             </div>
+            <h4 id="product-search-error" class="error-font">Error searching for products. Please refresh and try again.</h4>
+            <h4 id="product-search-none">No search results.</h4>
         </div>
     </div>
 </body>

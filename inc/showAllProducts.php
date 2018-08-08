@@ -1,7 +1,9 @@
 <?php
+showAllProducts();
 function showAllProducts()
 {
-   include "connect.php";
+   //You may have to update this to connect.php depending on your heroku setup. 
+   include "dbConnection.php";
    $conn = getDBConnection();
    
    $sql = "SELECT senId, sen_firstName, sen_lastName, state, imgURL, price, party

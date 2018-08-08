@@ -11,6 +11,7 @@ class Product {
 }
 
 //TEST DATA
+/*
 var response = [{
         sen_firstName: "John",
         sen_lastName: "McCain",
@@ -48,8 +49,7 @@ var response = [{
         senId: 4
     }
 ];
-
-
+*/
 function ajaxCall(type, url, payload, successCallback, errorCallback){
      $.ajax({
       url: url,
